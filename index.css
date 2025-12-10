@@ -1,0 +1,68 @@
+body {
+  background: #fff2e1;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #ff4400;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff2e1;
+}
+
+.header-title {
+  position: relative;
+
+  /* width: 100%; */
+
+  h1 {
+    color: #fff2e1;
+
+    /* font-size: 72px; */
+
+    font-size: 48px;
+    margin-left: -30px;
+  }
+
+  .header-inner {
+    margin: 0;
+
+    left: 0;
+    /* top: -46px; */
+
+    /* margin-top: -20px; */
+    /* position: absolute; */
+
+    display: flex;
+    align-items: flex-end;
+
+    transform: translateY(-130px) rotate(-20deg);
+    height: 200px;
+  }
+
+  .the-engineer {
+    background: #fff2e1;
+    /* position: absolute; */
+    white-space: nowrap;
+    height: 300px;
+    width: 3000px;
+    display: flex;
+    align-items: end;
+    margin-left: 4px;
+    padding-left: 4px;
+    color: #ff4400;
+  }
+}
