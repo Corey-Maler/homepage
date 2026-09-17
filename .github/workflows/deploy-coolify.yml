@@ -1,0 +1,24 @@
+name: Deploy homepage
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: coolify-homepage-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Trigger Coolify deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deployment
+        env:
+          COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
+          COOLIFY_WEBHOOK: ${{ secrets.COOLIFY_WEBHOOK }}
+        run: |
+          curl --fail-with-body --request GET "$COOLIFY_WEBHOOK" \
+            --header "Accept: application/json" \
+            --header "Authorization: Bearer $COOLIFY_TOKEN"
